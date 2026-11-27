@@ -1,0 +1,15 @@
+{
+  "name": "universal-workflow",
+  "owner": {
+    "name": "Universal Workflow contributors"
+  },
+  "metadata": {
+    "description": "Five skills for taking work from evidence to delivery and improving the next run."
+  },
+  "plugins": [
+    {
+      "name": "universal-workflow",
+      "source": "./plugins/universal-workflow"
+    }
+  ]
+}

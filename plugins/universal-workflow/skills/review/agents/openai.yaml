@@ -1,0 +1,5 @@
+interface:
+  display_name: "Review"
+  short_description: "Assess a deliverable against its brief and standards"
+policy:
+  allow_implicit_invocation: false

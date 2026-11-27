@@ -1,0 +1,6 @@
+{
+  "name": "universal-workflow",
+  "version": "0.1.0",
+  "description": "Research a question, refine the plan, do the work, review the result, and improve the next run.",
+  "skills": "./skills/"
+}

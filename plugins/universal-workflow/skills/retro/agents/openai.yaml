@@ -1,0 +1,5 @@
+interface:
+  display_name: "Retro"
+  short_description: "Find evidence-backed improvements for next time"
+policy:
+  allow_implicit_invocation: false

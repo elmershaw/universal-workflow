@@ -1,0 +1,20 @@
+{
+  "name": "universal-workflow",
+  "interface": {
+    "displayName": "Universal Workflow"
+  },
+  "plugins": [
+    {
+      "name": "universal-workflow",
+      "source": {
+        "source": "local",
+        "path": "./plugins/universal-workflow"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}
