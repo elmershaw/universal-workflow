@@ -30,19 +30,19 @@ claude plugin install universal-workflow@universal-workflow
 
 ## Install from GitHub
 
-After the repository is pushed, replace `OWNER/REPO` with its GitHub slug.
+Use a GitHub SSH key with read access to this repository.
 
 **Codex**
 
 ```sh
-codex plugin marketplace add OWNER/REPO
+codex plugin marketplace add git@github.com:elmershaw/universal-workflow.git
 codex plugin add universal-workflow@universal-workflow
 ```
 
 **Claude Code**
 
 ```sh
-claude plugin marketplace add OWNER/REPO
+claude plugin marketplace add git@github.com:elmershaw/universal-workflow.git
 claude plugin install universal-workflow@universal-workflow
 ```
 
@@ -55,3 +55,17 @@ Give each stage the relevant output from the previous one. For example, give `re
 Research can be selected automatically. Invoke the other four stages explicitly. The plugin supplies skill instructions and needs no plugin-specific setup.
 
 Both clients load the same skill files from `plugins/universal-workflow/skills/`.
+
+## Verify a release
+
+With Git, Python 3, Codex CLI, and Claude Code on your PATH, run this from the repository before pushing. It installs the extracted archive of `HEAD` in clean profiles and verifies that both clients discover all five skills.
+
+```sh
+python3 scripts/smoke-test.py
+```
+
+After pushing, run the same check against the GitHub marketplace.
+
+```sh
+python3 scripts/smoke-test.py --marketplace git@github.com:elmershaw/universal-workflow.git
+```
